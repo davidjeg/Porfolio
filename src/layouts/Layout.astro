@@ -1,0 +1,57 @@
+---
+import Navbar from '../components/Navbar.astro';
+import '@fontsource/zen-dots'
+import '@fontsource/manjari';
+import '@fontsource/michroma';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="dark:bg-zinc-950 bg-zinc-300 dark:text-zinc-200 text-zinc-700">
+		<Navbar />
+		<main >
+			<slot />
+		</main>
+	</body>
+</html>
+<style is:global>
+	body{
+		overflow-x: hidden;
+		color: white;
+	}
+	
+	::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+	
+
+</style>
+

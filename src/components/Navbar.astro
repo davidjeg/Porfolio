@@ -1,0 +1,18 @@
+---
+import { ThemeSwitcher } from "./ThemeSwitcher";
+import {DropDownLanguageButton} from './DropDownLanguageButton'
+---
+<div class="w-full  top-14 fixed z-50">
+    <div class="backdrop-blur-md bg-white/5 w-full max-w-5xl mx-auto rounded-lg">
+
+    <nav class="w-full max-w-4xl mx-auto flex items-center justify-between  py-2 ">
+        <span>David</span>
+        <div class="flex items-center gap-12">
+            <DropDownLanguageButton client:load/>
+            <ThemeSwitcher  client:load/>
+        </div>
+    </nav>
+    </div>
+
+</div>
+
